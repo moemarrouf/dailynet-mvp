@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import PhoneFrameWrapper from "@/components/PhoneFrameWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,10 +30,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       </head>
-      <body className={inter.className}>
-        <main className="min-h-screen bg-white">
+      <body className={inter.className + " bg-neutral-900"}>
+        <PhoneFrameWrapper>
           {children}
-        </main>
+        </PhoneFrameWrapper>
       </body>
     </html>
   );
